@@ -27,8 +27,11 @@ import wikipedia as wiki
 requests.packages.urllib3.disable_warnings()
 loop = uvloop.new_event_loop()
 
-cl = LINE("Oppofbento@gmail.com","bento24")
+cl = LINE("EMAIL","PASSWORD")
 cl.log("Auth Token : " + str(cl.authToken))
+
+k1 = LINE()
+k1.log("Auth Token : " + str(k1.authToken))
 #==========GREET_TEMPLATE========
 print ("♒♒♒♒♒♒♒🔰🔰♒♒♒♒♒♒♒")
 print ("================================")
@@ -39,15 +42,16 @@ print ("♒♒♒♒♒♒♒🔰🔰♒♒♒♒♒♒♒")
 
 oepoll = OEPoll(cl)
 call = cl
-creator = ["ua21bee8aaf9882bc95b36fd70574b189"]
-owner = ["ua21bee8aaf9882bc95b36fd70574b189"]
-admin = ["ua21bee8aaf9882bc95b36fd70574b189"]
-staff = ["ua21bee8aaf9882bc95b36fd70574b189"]
+creator = ["u9e7b95e0fe30d1b8a23a6c83e73a5d8f"]
+owner = ["u9e7b95e0fe30d1b8a23a6c83e73a5d8f"]
+admin = ["uc5a1f2e068afce3a18b68590e28c78b4"]
+staff = ["uc5a1f2e068afce3a18b68590e28c78b4"]
 
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid
-KAC = [cl]
-Bots = [mid]
+Amid = k1.getProfile().mid
+KAC = [cl,k1]
+Bots = [mid,Amid]
 Saints = admin + owner + staff
 Team = creator + owner + admin + staff + Bots
 Setbot = codecs.open("setting.json","r","utf-8")
@@ -627,7 +631,7 @@ def sendTemplates(to, data):
 def sendTextTemplate25(to, text):
     data = {
                                         "type": "flex",
-                                        "altText": "ARASTA",
+                                        "altText": "G⃠R⃠E⃠E⃠T⃠",
                                         "contents": {
   "styles": {
     "body": {
@@ -660,7 +664,7 @@ def sendTextTemplate25(to, text):
            {
             "contents": [
               {
-            "text": "✴️ARASTA BOT✴️", #ᴘᴇʟᴀᴋᴜ:{} ".format(cl.getContact(mid).displayName),
+            "text": "✴️C̸͟͞R̸͟͞E̸͟͞A̸͟͞T̸͟͞O̸͟͞R̸͟͞ B̸͟͞O̸͟͞T̸͟͞ G̸͟͞R̸͟͞E̸͟͞E̸͟͞T̸͟͞✴️", #ᴘᴇʟᴀᴋᴜ:{} ".format(cl.getContact(mid).displayName),
            "size": "xxs",
            "align": "center",
            "color": "#ffff00",
@@ -829,7 +833,7 @@ def sendTextTemplate25(to, text):
 def sendTextTemplate300(to, text): #Def baca: 1
     data = {
                                        "type": "flex",
-                                       "altText": "ARASTA",
+                                       "altText": "G⃠R⃠E⃠E⃠T⃠",
                                        "contents": {
 "type": "carousel",
 "contents": [
@@ -1082,7 +1086,7 @@ def sendTextTemplate300(to, text): #Def baca: 1
 def sendTextTemplate(to, text):
     data = {
             "type": "flex",
-            "altText": "ARASTA",
+            "altText": "G⃠R⃠E⃠E⃠T⃠",
             "contents": {
   "styles": {
     "body": {
@@ -1148,7 +1152,7 @@ def sendTextTemplate(to, text):
 def sendTextTemplate28(to, text):
     data = {
                                         "type": "flex",
-                                        "altText": "ARASTA",
+                                        "altText": "G⃠R⃠E⃠E⃠T⃠",
                                         "contents": {
   "styles": {
     "body": {
@@ -1341,7 +1345,7 @@ def sendTextTemplate28(to, text):
 def sendTextTemplate1(to, text):
     data = {
                                         "type": "flex",
-                                        "altText": "ARASTA",
+                                        "altText": "G⃠R⃠E⃠E⃠T⃠",
                                         "contents": {
 "styles": {"body": {
 "backgroundColor": "#000000"
@@ -1491,7 +1495,7 @@ def sendTextTemplate1(to, text):
 def sendTextTemplate2(to, text):
     data = {
                                         "type": "flex",
-                                        "altText": "ARASTA",
+                                        "altText": "G⃠R⃠E⃠E⃠T⃠",
                                         "contents": {
   "styles": {"body": {
             "backgroundColor": "#000000"},"footer": {"backgroundColor": "#000000"}},
@@ -1602,7 +1606,7 @@ def sendTextTemplate2(to, text):
 def sendTextTemplate23(to, text):
     data = {
                                         "type": "flex",
-                                        "altText": "ARASTA",
+                                        "altText": "G⃠R⃠E⃠E⃠T⃠",
                                         "contents": {
   "styles": {
     "body": {
@@ -2268,7 +2272,7 @@ def sendTextTemplate00(to, text):
 def sendTextTemplate10(to, text):
     data = {
                                 "type": "flex",
-                                "altText": "ARASTA",
+                                "altText": "G⃠R⃠E⃠E⃠T⃠",
                                 "contents": {
 "type": "carousel",
 "contents": [
@@ -2673,7 +2677,7 @@ def media():
     helpMessage3 = "╔═══════════\n" + \
 "┣[🇧🇩]► " + key + "Addsticker\n" + \
 "┣[🇧🇩]► " + key + "Addmp3\n" + \
-"┣[🇧??]► " + key + "Addaudio\n" + \
+"┣[🇧🇩]► " + key + "Addaudio\n" + \
 "┣[🇧🇩]► " + key + "Addimg\n" + \
 "┣[🇧🇩]► " + key + "Dellsticker\n" + \
 "┣[🇧🇩]► " + key + "Dellaudio\n" + \
@@ -2695,6 +2699,27 @@ def media():
 "┣[🇧🇩]► " + key + "Youtube「text」\n" + \
 "╚═══════════"
     return helpMessage3
+
+def helphost():
+    key = Setmain["keyCommand"]
+    key = key.title()
+    helpMessage6 = "╭「⏺️ᴄᴏᴍᴀɴᴅ ɢʜᴏsᴛ⏺️」\n"+\
+                  "│⏺️"  + key + "ᴀᴊsɴᴀᴍᴇ:「ᴛᴇxᴛ」\n" + \
+                  "│⏺️"  + key + "ᴀᴊsғᴏᴛᴏ\n" + \
+                  "│⏺️"  + key + "ᴀᴊs ᴄᴀɴᴄᴇʟ\n" + \
+                  "│⏺️"  + key + "ᴀᴊs ᴋɪᴄᴋᴀʟ\n" + \
+                  "│⏺️"  + key + "ᴀᴊs ᴀʙsᴇɴ\n" + \
+                  "│⏺️"  + key + "ᴘᴀs ʙᴀɴᴅ「ʙᴏᴍ」\n" + \
+                  "│⏺️"  + key + "ᴄᴀɴᴄᴇʟᴀʟʟ\n" + \
+                  "│⏺️"  + key + "ᴄʀᴏᴛ「@」\n" + \
+                  "│⏺️"  + key + "ɢᴋɪᴄᴋ「@」\n" + \
+                  "│⏺️"  + key + "ᴋɪᴄᴋ「@」\n" + \
+                  "│⏺️"  + key + "ᴊs sᴛᴀʏ\n" + \
+                  "│⏺️"  + key + "ᴊs ɪɴ-ᴏᴜᴛ\n" + \
+                  "│⏺️"  + key + "ɢʟɪsᴛᴊs1\n" + \
+                  "│⏺️"  + key + "ᴋ1-ɪɴᴠɪᴛ「ɴᴏᴍᴇʀ」\n" + \
+                  "╰「⏺️sᴇʟғ ᴘʏᴛʜᴏɴ³⏺️」"
+    return helpMessage6
 
 def bot(op):
     global time
@@ -2961,7 +2986,7 @@ def bot(op):
             "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~rasitadudul",
+              "uri": "http://line.me/ti/p/~slanker123456",
           },
            "align": "center"
           }
@@ -3201,7 +3226,7 @@ def bot(op):
             "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~rasitadudul",
+              "uri": "http://line.me/ti/p/~slanker123456",
           },
            "align": "center"
           }
@@ -3436,7 +3461,7 @@ def bot(op):
             "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~rasitadudul",
+              "uri": "http://line.me/ti/p/~slanker123456",
           },
            "align": "center"
           }
@@ -3507,6 +3532,45 @@ def bot(op):
                    cl.sendMessage(op.param1,"そ、[ʙʟᴀᴄᴋʟɪsᴛ]そうですか(｀・ω・´)")
                except:
                    pass
+
+        if op.type == 19:
+            if mid in op.param3:
+            	if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    try:
+                        k1.acceptGroupInvitation(op.param1)
+                        k1.inviteIntoGroup(op.param1,[mid])
+                        k1.kickoutFromGroup(op.param1,[op.param2])
+                        cl.acceptGroupInvitation(op.param1)
+                        k1.leaveGroup(op.param1)
+                        cl.inviteIntoGroup(op.param1,[Amid])
+                        wait["blacklist"][op.param2] = True
+                    except:
+                        pass
+
+        if op.type == 19:
+            if Amid in op.param3:
+                if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                    pass
+                else:
+                    wait["blacklist"][op.param2] = True
+                    try:
+                        cl.kickoutFromGroup(op.param1,[op.param2])
+                        cl.inviteIntoGroup(op.param1,[Amid])
+                    except:
+                        pass
+
+        if op.type == 32:
+            if op.param3 in Amid:
+              if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                  wait["blacklist"][op.param2] = True
+                  try:
+                      if op.param3 not in wait["blacklist"]:
+                          cl.kickoutFromGroup(op.param1,[op.param2])
+                          cl.inviteIntoGroup(op.param1,[Amid])
+                          k1.kickoutFromGroup(op.param1,[op.param2])
+                          sendTextTemplate1(op.param1,"Anjirrr...di cancel")
+                  except:
+                      pass
 
         if op.type == 32:
             if wait["backup"] == True:
@@ -4151,7 +4215,7 @@ def bot(op):
                 timeNow = datetime.now(tz=tz)
                 data = {
                                        "type": "flex",
-                                       "altText": "ARASTA",
+                                       "altText": "G⃠R⃠E⃠E⃠T⃠",
                                        "contents": {
 "type": "carousel",
 "contents": [
@@ -4698,7 +4762,7 @@ def bot(op):
                 timeNow = datetime.now(tz=tz)
                 data = {
                                        "type": "flex",
-                                       "altText": "ARASTA",
+                                       "altText": "G⃠R⃠E⃠E⃠T⃠",
                                        "contents": {
 "type": "carousel",
 "contents": [
@@ -5250,7 +5314,7 @@ def bot(op):
                         timeNow = datetime.now(tz=tz)
                         data = {
                                        "type": "flex",
-                                       "altText": "ARASTA",
+                                       "altText": "G⃠R⃠E⃠E⃠T⃠",
                                        "contents": {
 "type": "carousel",
 "contents": [
@@ -5588,7 +5652,7 @@ def bot(op):
                         if mention ['M'] in mid:
                            data = {
                                        "type": "flex",
-                                       "altText": "ARASTA",
+                                       "altText": "G⃠R⃠E⃠E⃠T⃠",
                                        "contents": {
 "type": "carousel",
 "contents": [
@@ -5887,7 +5951,7 @@ def bot(op):
                         if mention ['M'] in mid:
                            data = {
                                        "type": "flex",
-                                       "altText": "ARSTA",
+                                       "altText": "G⃠R⃠E⃠E⃠T⃠",
                                        "contents": {
 "type": "carousel",
 "contents": [
@@ -6202,7 +6266,7 @@ def bot(op):
                 cover = cl.getProfileCoverURL(sender)
                 data = {
                                 "type": "flex",
-                                "altText": "ARASTA",
+                                "altText": "G⃠R⃠E⃠E⃠T⃠",
                                 "contents": {
 "type": "carousel",
 "contents": [
@@ -6680,6 +6744,20 @@ def bot(op):
                             del Setmain["RAfoto"][mid]
                             cl.updateProfilePicture(path)
                             sendTextTemplate1(msg.to,"ғᴏᴛᴏ ʙᴇʀʜᴀsɪʟ")
+                        if Amid in Setmain["RAfoto"]:
+                            path = k1.downloadObjectMsg(msg_id)
+                            del Setmain["RAfoto"][Amid]
+                            k1.updateProfilePicture(path1)
+                            k1.sendMessage(msg.to,"ғᴏᴛᴏ ʙᴇʀʜᴀsɪʟ ᴅɪ'ʀᴜʙᴀʜ")
+
+               if msg.contentType == 1:
+                 if msg._from in admin:
+                   if settings["changePicture"] == True:
+                     path1 = k1.downloadObjectMsg(msg_id)
+                     settings["changePicture"] = False
+                     k1.updateProfilePicture(path1)
+                     k1.sendMessage(msg.to, "✓ᴘʀᴏғɪʟᴇ ᴘʜᴏᴛᴏ\nsᴜᴄᴄᴇssғᴜʟʟʏ ᴄʜᴀɴɢᴇᴅ")
+
 
                if msg.contentType == 1:
                  if msg._from in admin:
@@ -6740,6 +6818,11 @@ def bot(op):
                             if msg._from in admin:
                                helpMessage5 = helpadmin()
                                sendTextTemplate25(msg.to, str(helpMessage5))
+                        elif cmd == "help ghost":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               helpMessage6 = helpghost()
+                               sendTextTemplate25(msg.to, str(helpMessage6))
 
                         elif cmd.startswith("rname "):
                               if msg._from in admin:
@@ -6879,6 +6962,9 @@ def bot(op):
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
+                               msg.contentType = 13
+                               msg.contentMetadata = {'mid': Amid}
+                               cl.sendMessage(msg.to, None, contentMetadata={'mid': Amid}, contentType=13)
 
                         elif cmd == "myname":
                           if msg._from in admin:
@@ -7073,7 +7159,7 @@ def bot(op):
                                 G = cl.getGroup(to)
                                 data = {
                                 "type": "flex",
-                                "altText": "ARASTA",
+                                "altText": "G⃠R⃠E⃠E⃠T⃠",
                                 "contents": {
 "type": "carousel",
 "contents": [
@@ -7448,6 +7534,69 @@ def bot(op):
                                    end = "\n"
                                    ma += "┣[]► " + str(a) + ". " +G.name+ "\n"
                                sendTextTemplate23(msg.to,"╔══[ GROUP LIST ]\n║\n"+ma+"║\n╚══[ Total「"+str(len(gid))+"」Groups ]")
+
+                        elif cmd == "glistjs1":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               ma = ""
+                               a = 0
+                               gid = k1.getGroupIdsJoined()
+                               for i in gid:
+                                   G = k1.getGroup(i)
+                                   a = a + 1
+                                   end = "\n"
+                                   ma += "┣[]► " + str(a) + ". " +G.name+ "\n"
+                               k1.sendMessage(msg.to,"╔══[ GROUP LIST ]\n║\n"+ma+"║\n╚══[ Total「"+str(len(gid))+"」Groups ]")
+
+                        elif cmd.startswith("k1-invit "):
+                             if msg._from in admin:
+                                sep = msg.text.split(" ")
+                                number = msg.text.replace(sep[0] + " ","")
+                                bolo = k1.getGroupIdsJoined()
+                                try:
+                                    group = bolo[int(number)-1+0]
+                                    G = k1.getGroup(group)
+                                    gid = G.id
+                                    no = 0 + 1
+                                    k1.findAndAddContactsByMid(sender)
+                                    k1.inviteIntoGroup(gid, [sender])
+                                    k1.sendMessage(to,"✓sᴜᴄᴄᴇss ɪɴᴠɪᴛᴇ: "+str(G.name))
+                                except Exception as e:
+                                    k1.sendMessage(msg.to, str(e))
+#addbots for 7 bots
+
+                        elif cmd == "addbot":
+                            try:
+                                cl.sendMessage(msg.to, "⏳ᴛᴜɴɢɢᴜ sᴇʟᴀᴍᴀ 5 ᴍᴇɴɪᴛ")
+                                cl.findAndAddContactsByMid(Amid)
+                                time.sleep(5)
+                                cl.findAndAddContactsByMid(Bmid)
+                                time.sleep(5)
+                                cl.findAndAddContactsByMid(Zmid)
+                                time.sleep(5)
+                                k1.findAndAddContactsByMid(mid)
+                                time.sleep(5)
+                                k1.findAndAddContactsByMid(Bmid)
+                                time.sleep(5)
+                                k1.findAndAddContactsByMid(Zmid)
+                                time.sleep(5)
+                                cl.sendMessage(to, "✓sᴜᴄᴄᴇss") 
+                                k1.sendMessage(to, "✓sᴜᴄᴄᴇss")
+                            except:
+                                cl.sendMessage(to, "✓sᴜᴄᴄᴇss") 
+                                k1.sendMessage(to, "✓sᴜᴄᴄᴇss")
+
+                        if cmd == "friendlist": 
+                          if msg._from in admin:
+                            contactlist = k1.getAllContactIds()
+                            kontak = k1.getContacts(contactlist)
+                            num=1
+                            msgs="『FRIENDLIST』\n\n"
+                            for ids in kontak:
+                                msgs+="\n%i. %s" % (num, ids.displayName)
+                                num=(num+1)
+                            msgs+="\n\nTotal Friend : %i" % len(kontak)
+                            k1.sendMessage(to, msgs)
 
                         elif cmd == "gurl":
                           if wait["selfbot"] == True:
@@ -8036,6 +8185,218 @@ def bot(op):
                                     sendTextTemplate1(msg.to,"Jumlah melebihi batas")
 
 #==========Comen Spam==={{{
+                        elif cmd.startswith("ajsname: "):
+                          if msg._from in admin:
+                            separate = msg.text.split(" ")
+                            string = msg.text.replace(separate[0] + " ","")
+                            if len(string) <= 10000000000:
+                                profile = k1.getProfile()
+                                profile.displayName = string
+                                k1.updateProfile(profile)
+                                k1.sendMessage(msg.to,"✓sᴜᴄᴄᴇss " + string + "")
+
+                        elif cmd == "ajsfoto":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                settings["changePicture"] = True
+                                cl.sendMessage(msg.to,"📷 Kirim Fotonya...")
+
+                        elif cmd == "js stay":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                try:
+                                    ginfo = cl.getGroup(msg.to)
+                                    cl.inviteIntoGroup(msg.to, [Amid])
+                                    sendTextTemplate1(msg.to,"[ ɴᴀᴍᴀ ɢʀᴏᴜᴘ ]\n"+str(ginfo.name)+"\nᴅᴏɴᴇ ᴋɪᴄᴋᴇʀ ᴀᴋᴛɪᴠᴇ ᴊs")
+                                except:
+                                    pass             
+                        elif cmd == "js out":
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                G = cl.getGroup(msg.to)
+                                k1.sendMessage(msg.to, "Pulang dulu "+str(G.name))
+                                k1.leaveGroup(msg.to)
+
+                        elif cmd == "js in":
+                          if msg._from in admin:
+                           if msg.toType == 2:
+                               group = cl.getGroup(to)
+                               group.preventedJoinByTicket = False
+                               cl.updateGroup(group)
+                               invsend = 0
+                               ticket = cl.reissueGroupTicket(to)
+                               k1.acceptGroupInvitationByTicket(to,format(str(ticket)))
+                               time.sleep(0.01)
+                        elif msg.text in ["Ajs absen"]:
+                            if msg._from in admin:
+                                X = cl.getGroup(msg.to)
+                                X.preventedJoinByTicket = False
+                                cl.updateGroup(X)
+                                invsend = 0
+                                Ticket = cl.reissueGroupTicket(msg.to)
+                                k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                           #     k2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                          #      sw.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                k1.sendMessage(to,"ᴛʜᴀɴᴋᴢ ʙᴏsᴋᴜ")
+                             #   k2.sendMessage(to,"ᴛʜᴀɴᴋᴢ ʙᴏsᴋᴜ")
+                             #   sw.sendMessage(to,"ᴛʜᴀɴᴋᴢ ʙᴏsᴋᴜ")
+                                G = k1.getGroup(msg.to)
+                           #     G = k2.getGroup(msg.to)
+                            #    G = sw.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                k1.updateGroup(G)
+                            #    k2.updateGroup(G)
+                            #    sw.updateGroup(G)
+                                k1.sendMessage(to,"ᴋᴀᴍɪ ᴘᴀᴍɪᴛ ʟᴀɢɪ ʙᴏs\n╠❂➢sᴛᴀʏ ᴅɪʟᴜᴀʀ sᴀᴊᴀ\n╠❂➢ᴇᴍᴍᴜᴜᴜᴜᴜᴀᴄᴄʜ")
+                          #      k2.sendMessage(to,"ᴋᴀᴍɪ ᴘᴀᴍɪᴛ ʟᴀɢɪ ʙᴏs\n╠❂➢sᴛᴀʏ ᴅɪʟᴜᴀʀ sᴀᴊᴀ\n╠❂➢ᴇᴍᴍᴜᴜᴜᴜᴜᴀᴄᴄʜ")
+                            #    sw.sendMessage(to,"ᴋᴀᴍɪ ᴘᴀᴍɪᴛ ʟᴀɢɪ ʙᴏs\n╠❂➢sᴛᴀʏ ᴅɪʟᴜᴀʀ sᴀᴊᴀ\n╠❂➢ᴇᴍᴍᴜᴜᴜᴜᴜᴀᴄᴄʜ")
+                                Ticket = k1.reissueGroupTicket(msg.to)
+                            #    Ticket = k2.reissueGroupTicket(msg.to)
+                            #    Ticket = sw.reissueGroupTicket(msg.to)
+                                k1.sendMessage(msg.to,"ʙʏᴇ ʙʏᴇ ғᴀᴍs "+str(G.name))
+                            #    k2.sendMessage(msg.to,"ʙʏᴇ ʙʏᴇ ғᴀᴍs "+str(G.name))
+                            #    sw.sendMessage(msg.to,"ʙʏᴇ ʙʏᴇ ғᴀᴍs "+str(G.name))
+                                k1.leaveGroup(msg.to)
+                           #     k2.leaveGroup(msg.to)
+                            #    sw.leaveGroup(msg.to)
+                                cl.inviteIntoGroup(op.param1, [Amid])
+                        elif msg.text in ["Ajs kickall"]:
+                            if msg._from in admin:
+                                X = cl.getGroup(msg.to)
+                                X.preventedJoinByTicket = False
+                                cl.updateGroup(X)
+                                invsend = 0
+                                Ticket = cl.reissueGroupTicket(msg.to)
+                                k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            #    k2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                            #    sw.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                group = k1.getGroup(msg.to)
+                            #    group = k2.getGroup(msg.to)
+                            #    group = sw.getGroup(msg.to)
+                                targets = [contact.mid for contact in group.members]
+                                for target in targets:
+                                    time.sleep(0.2)
+                                    if target not in Bots:
+                                        if target not in admin:
+                                            try:
+                                                random.choice(KAC).kickoutFromGroup(msg.to,[target])
+                                             #   k2.kickoutFromGroup(msg.to,[target])
+                                               # sw.kickoutFromGroup(msg.to,[target])
+                                            except:
+                                                pass
+                                G = k1.getGroup(msg.to)
+                              #  G = k2.getGroup(msg.to)
+                            #    G = sw.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                k1.updateGroup(G)
+                           #     k2.updateGroup(G)
+                            #    sw.updateGroup(G)
+                                Ticket = k1.reissueGroupTicket(msg.to)
+                            #    Ticket = k2.reissueGroupTicket(msg.to)
+                             #   Ticket = sw.reissueGroupTicket(msg.to)
+                                k1.leaveGroup(msg.to)
+                            #    k2.leaveGroup(msg.to)
+                            #    sw.leaveGroup(msg.to)
+                                cl.inviteIntoGroup(op.param1, [Amid])
+                        elif msg.text in ["Ajs cancel"]:
+                            if msg._from in admin:
+                                X = cl.getGroup(msg.to)
+                                X.preventedJoinByTicket = False
+                                cl.updateGroup(X)
+                                invsend = 0
+                                Ticket = cl.reissueGroupTicket(msg.to)
+                                k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                          #      k2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                          #      sw.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                group = k1.getGroup(msg.to)
+                          #      group = k2.getGroup(msg.to)
+                           #     group = sw.getGroup(msg.to)
+                                targets = [contact.mid for contact in group.invitee]
+                                for target in targets:
+                                    time.sleep(0.4)
+                                    if target not in Bots:
+                                        if target not in admin:
+                                            try:
+                                                random.choice(KAC).cancelGroupInvitation(msg.to,[target])
+                                              #  k2.cancelGroupInvitation(msg.to,[target])
+                                                #sw.cancelGroupInvitation(msg.to,[target])
+                                            except:
+                                                pass
+                                G = k1.getGroup(msg.to)
+                           #     G = k2.getGroup(msg.to)
+                            #    G = sw.getGroup(msg.to)
+                                G.preventedJoinByTicket = True
+                                k1.updateGroup(G)
+                           #     k2.updateGroup(G)
+                             #   sw.updateGroup(G)
+                                Ticket = k1.reissueGroupTicket(msg.to)
+                             #   Ticket = k2.reissueGroupTicket(msg.to)
+                            #    Ticket = sw.reissueGroupTicket(msg.to)
+                                k1.sendMessage(msg.to, "❂➢ʙʏᴇ ʙʏᴇ ғᴀᴍs "+str(G.name))
+                           #     k2.sendMessage(msg.to, "❂➢ʙʏᴇ ʙʏᴇ ғᴀᴍs "+str(G.name))
+                            #    sw.sendMessage(msg.to, "❂➢ʙʏᴇ ʙʏᴇ ғᴀᴍs "+str(G.name))
+                                k1.leaveGroup(msg.to)
+                            #    k2.leaveGroup(msg.to)
+                             #   sw.leaveGroup(msg.to)
+                                cl.inviteIntoGroup(op.param1, [Amid])
+                        elif ("Crot" in msg.text):
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               key = eval(msg.contentMetadata["MENTION"])
+                               key["MENTIONEES"][0]["M"]
+                               targets = []
+                               for x in key["MENTIONEES"]:
+                                    targets.append(x["M"])
+                               for target in targets:
+                                   if target not in Bots:
+                                       try:
+                                           G = cl.getGroup(msg.to)
+                                           G.preventedJoinByTicket = False
+                                           cl.updateGroup(G)
+                                           invsend = 0
+                                           Ticket = cl.reissueGroupTicket(msg.to)
+                                           k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                           k1.kickoutFromGroup(msg.to, [target])
+                                           k1.leaveGroup(msg.to)
+                                           cl.inviteIntoGroup(op.param1, [Amid])
+                                           X = cl.getGroup(msg.to)
+                                           X.preventedJoinByTicket = True
+                                           cl.updateGroup(X)
+                                       except:
+                                           k1.sendMessage(to, "Kakiku Struk Boss")
+                        elif cmd == "pas band" or text.lower() == '.goo':
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                               group = cl.getGroup(msg.to)
+                               if group.invitee is None:
+                                   cl.sendMessage(op.message.to, "Kosong.....")
+                               else:
+                                   nama = [contact.mid for contact in group.invitee]
+                                   for x in nama:
+                                     if x not in Bots:
+                                       klist=[mid,Amid]
+                                       random.choice(KAC).cancelGroupInvitation(msg.to, [x])
+                                       time.sleep(0.00001)
+                                       print (msg.to, [x])
+                          if msg._from in admin:
+                                gs = cl.getGroup(msg.to)
+                                targets = []
+                                for x in gs.members:
+                                    targets.append(x.mid)
+                                for a in admin:
+                                    if a in targets:
+                                        try:
+                                            targets.remove(a)
+                                        except:
+                                            pass
+                                for target in targets:
+                                    try:
+                                        klist=[mid,Amid]
+                                        random.choice(KAC).kickoutFromGroup(msg.to,[target])
+                                        time.sleep(0.00001)
+                                        print (msg.to,[g.mid])
+                                    except:
+                                        pass
 
 #===========Protection============#
                         elif 'Welcome ' in msg.text:
@@ -8491,7 +8852,7 @@ def bot(op):
                                     me = best.url
                                     data = {
                                 "type": "flex",
-                                "altText": "ARASTA",
+                                "altText": "G⃠R⃠E⃠E⃠T⃠",
                                 "contents": {
 "type": "carousel",
 "contents": [
@@ -8754,7 +9115,7 @@ def bot(op):
 "contents": [
 {
 "type": "text",
-"text": "🔰arasta_ʙᴏᴛᴢ",
+"text": "🔰ɢʀᴇᴇt_ʙᴏᴛᴢ",
 "weight": "bold",
 "color": "#00ff00",
 "size": "xxs",
@@ -9439,7 +9800,7 @@ def bot(op):
       "aspectMode": "cover",
            "action": {
             "type": "uri",
-            "uri": "http://line.me/ti/p/~rasitadudul",
+            "uri": "http://line.me/ti/p/~slanker123456",
             },
             "flex": 0
           },
@@ -10085,7 +10446,7 @@ def bot(op):
       "aspectMode": "cover",
            "action": {
             "type": "uri",
-            "uri": "http://line.me/ti/p/~rasitadudul",
+            "uri": "http://line.me/ti/p/~slanker123456",
             },
             "flex": 0
 }
@@ -10487,7 +10848,7 @@ def bot(op):
             "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~rasitadudul",
+              "uri": "http://line.me/ti/p/~slanker123456",
           },
            "align": "center"
           }
@@ -11271,7 +11632,7 @@ def bot(op):
             "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~rasitadudul",
+              "uri": "http://line.me/ti/p/~slanker123456",
           },
            "align": "center"
           }
@@ -11385,7 +11746,7 @@ def bot(op):
             "color": "#33ffff"
            },
              {
-            "text": "🖼️🖼️🖼️",
+            "text": "🖼️??️🖼️",
             "size": "xxs",
             "color": "#FF9900",
             "align": "center",
@@ -12249,7 +12610,7 @@ def bot(op):
          "size": "4xl",
          "action": {
             "type": "uri",
-            "uri": "http://line.me/ti/p/~rasitadudul",
+            "uri": "http://line.me/ti/p/~greetolala990",
             },
             "flex": 0
           },
@@ -12549,7 +12910,7 @@ def bot(op):
             "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~rasitadudul",
+              "uri": "http://line.me/ti/p/~slanker123456",
           },
            "align": "center"
           }
