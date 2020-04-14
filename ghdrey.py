@@ -14,7 +14,7 @@ import youtube_dl
 #jangan ᴜʙᴀʜ ᴍɪᴅ ᴄʀᴇᴀᴛᴏʀ
 #remake ʙʏ: ʀᴇʏ_ɢʜᴅ
 cl = LineClient() #Login via qr
-#cl = LineClient("","") #login via email
+#cl = LineClient("aquanay87@gmail.com","aqua87") #login via email
 #cl = LineClient(authToken='') #login via token
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
@@ -23,9 +23,9 @@ print("Login SB GHD SUCCESS BANG REY")
 
 poll = LinePoll(cl)
 call = cl
-creator = ["u411e5942b009ef65f26471d44843d9e2"]
-owner = ["u411e5942b009ef65f26471d44843d9e2"]
-admin = ["u411e5942b009ef65f26471d44843d9e2"]
+creator = ["u847090dfcf44a19bc18bd5d8661cf817"]
+owner = ["u847090dfcf44a19bc18bd5d8661cf817"]
+admin = ["u847090dfcf44a19bc18bd5d8661cf817"]
 mid = cl.getProfile().mid
 Bots = [mid]
 #==[tata letak sc ghd]==#
@@ -1829,7 +1829,7 @@ def bot(op):
                             if msg._from in admin:
                                try:
                                    cl.removeAllMessages(op.param2)
-                                   cl.sendMessage(msg.to, "🔳sᴜᴄᴄᴇss ʀᴇsᴇᴛ ᴄʜᴀᴛ🔳")
+                                   cl.sendMessage(msg.to, "⚠️𝕾𝖚𝖈𝖈𝖊𝖘 𝖍𝖆𝖕𝖚𝖘 𝖈𝖍𝖆𝖙 𝖕𝖊𝖑𝖆𝖐𝖔𝖗⚠️")
                                except:
                                    pass
 
@@ -1840,7 +1840,7 @@ def bot(op):
                                pesan = text.replace(sep[0] + " ","")
                                saya = cl.getGroupIdsJoined()
                                for group in saya:
-                                   cl.sendMessage(group,"[🔳ɢʜᴅ sʜᴀʀᴇ🔲]\n" + str(pesan))
+                                   cl.sendMessage(group,"[⚠️𝖇𝖗𝖔𝖆𝖉𝖈𝖆𝖘𝖙⚠️]\n" + str(pesan))
 
                         elif cmd.startswith("gb: "):
                           if wait["selfbot"] == True:
@@ -2113,7 +2113,7 @@ def bot(op):
                                 cl.sendMessage(to,"[RESULT] %s" %(data.replace("Error: ")))
 
 #===========BOT UPDATE============#
-                        elif cmd == "but" or text.lower() == 'bos':
+                        elif cmd == "tag" or text.lower() == 'jancok':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                group = cl.getGroup(msg.to)
